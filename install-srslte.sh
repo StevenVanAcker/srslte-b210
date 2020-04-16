@@ -17,4 +17,5 @@ make -j$(ncpus)
 make install
 srslte_install_configs.sh user
 uhd_images_downloader
+ldconfig
 
