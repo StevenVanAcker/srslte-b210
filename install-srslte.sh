@@ -1,21 +1,13 @@
 #!/bin/sh -e
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get install -y build-essential git mdm
+apt-get update && apt-get install -y software-properties-common
 
-# Following https://github.com/srsLTE/srsLTE
-apt-get install --no-install-recommends -y cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev libuhd-dev uhd-host
 
-mkdir -p /opt
-cd /opt
-git clone https://github.com/srsLTE/srsLTE
-cd srsLTE
-mkdir build
-cd build
-cmake ..
-make -j$(ncpus)
-make install
-srslte_install_configs.sh user
+# Following https://docs.srslte.com/en/latest/general/source/1_installation.html
+add-apt-repository ppa:srslte/releases
+apt-get update
+apt-get install --no-install-recommends -y uhd-host srslte
 uhd_images_downloader
 ldconfig
 
