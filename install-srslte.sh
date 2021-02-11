@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get install -y software-properties-common
+apt-get update && apt-get install -y software-properties-common vim
 
 
 # Following https://docs.srslte.com/en/latest/general/source/1_installation.html
