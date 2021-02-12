@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+echo "Installing from packages"
+
 export DEBIAN_FRONTEND=noninteractive
 apt-get update && apt-get install -y software-properties-common vim
 
