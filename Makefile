@@ -10,4 +10,7 @@ run:
 	docker run --name srslte --rm -ti --privileged -v $$PWD:/data -v /dev:/dev srslte-docker /bin/bash
 
 runsrc:
-	docker run --name srslte-src --rm -ti --privileged -v $$PWD:/data -v /dev:/dev srslte-docker-src /bin/bash
+	docker run --name srslte --rm -ti --privileged -v $$PWD:/data -v /dev:/dev srslte-docker-src /bin/bash
+
+runanother:
+	docker exec -ti srslte /bin/bash

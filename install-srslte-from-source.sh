@@ -3,7 +3,7 @@
 echo "Installing from source"
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get install -y build-essential git mdm vim
+apt-get update && apt-get install -y build-essential git mdm vim nmap tcpdump iputils-ping iproute2 netcat
 
 # Following https://github.com/srsLTE/srsLTE
 apt-get install --no-install-recommends -y cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev libuhd-dev uhd-host
