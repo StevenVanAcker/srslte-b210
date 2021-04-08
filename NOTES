@@ -14,7 +14,7 @@
 - Tested with 4 phones:
 	- Samsung Galaxy S9 (SM-960F): works
 	- iPhone SE (software version 14.4.1): doesn't work (not sure why?)
-	- Motorola G2 (XT1068): doesn't work since it doesn't support LTE
+	- Motorola Moto G (XT1068): doesn't work since it doesn't support LTE
 	- Samsung Galaxy S III Mini (GT-i8190): doesn't work since it doesn't
 	  support LTE
 - Sending too much network traffic will cause packet loss, disconnecting the
