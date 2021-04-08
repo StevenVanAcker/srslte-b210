@@ -1,0 +1,22 @@
+- LTE is 4G but don't expect srslte to support 2G functions like voice and SMS!
+  (Check openbts for that)
+- Need to configure MCC and MNC to in enb.conf and epc.conf to match the SIM
+  card IMSI
+- Set the dl_earfcn (enb.conf) to a band that the UE supports
+- Set the APN name to something the phone expects, may need to configure the
+  APN in the phone
+	- APN name
+	- APN protocol IPv4
+- Using a GPSDO with 5V GPS antenna seems to be required to get a good signal,
+  even though some people were lucky to have a more or less accurate clock.
+- Using Sysmocom USIMs out of the box works. However, reprogrammed cards with
+  different values does not. I'm not sure why, further research is needed.
+- Tested with 4 phones:
+	- Samsung Galaxy S9 (SM-960F): works
+	- iPhone SE (software version 14.4.1): doesn't work (not sure why?)
+	- Motorola G2 (XT1068): doesn't work since it doesn't support LTE
+	- Samsung Galaxy S III Mini (GT-i8190): doesn't work since it doesn't
+	  support LTE
+- Sending too much network traffic will cause packet loss, disconnecting the
+  phone sometimes
+
